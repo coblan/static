@@ -1,0 +1,6 @@
+@media (min-width: 1000px){
+   .wy-nav-content{
+        max-width: 80%;
+        margin: 0 auto;
+   }
+}
