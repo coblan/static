@@ -27,14 +27,19 @@ var ex ={
     }
 }
 
-
-if(location.pathname.endsWith('/index.html')){
-    location='colorapi/color.html'
+var querystr = /\?(.+)$/.exec(scriptURL)[1]
+var search_args = ex.parseSearch(querystr)
+if (search_args.hide_index && search_args.real_index){
+    var list = search_args.hide_index.split(',')
+    if(list.indexOf(location.pathname)!=-1 ){
+        location=search_args.real_index
+    }
 }
+
+
 setTimeout(function(){
     $('#rtd-search-form input[name="q"]').attr('placeholder','搜索')
-    var querystr = /\?(.+)$/.exec(scriptURL)[1]
-    var search_args = ex.parseSearch(querystr)
+   
     if(search_args.content_width){
         $('.wy-nav-content').css("max-width",search_args.content_width)
     }
