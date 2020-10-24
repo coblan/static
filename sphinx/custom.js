@@ -1,3 +1,8 @@
+/*
+定制化sphinx主题read the doc
+content_width=1200px   80%
+
+*/
 var scripts = document.getElementsByTagName('script');
 var script = scripts[scripts.length - 1];
 var scriptURL = script.src;
