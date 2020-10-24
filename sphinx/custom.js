@@ -46,5 +46,5 @@ setTimeout(function(){
     if(search_args.content_width){
         $('.wy-nav-content').css("max-width",search_args.content_width)
     }
-},500)
+},20)
 
