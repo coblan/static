@@ -28,7 +28,8 @@ if(location.pathname.endsWith('/index.html')){
 }
 setTimeout(function(){
     $('#rtd-search-form input[name="q"]').attr('placeholder','搜索')
-    var search_args = ex.parseSearch(scriptURL)
+    var querystr = /\?(.+)$/.exec(scriptURL)[1]
+    var search_args = ex.parseSearch(querystr)
     if(search_args.content_width){
         $('.wy-nav-content').css("max-width",search_args.content_width)
     }
