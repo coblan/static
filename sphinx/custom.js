@@ -31,8 +31,11 @@ var querystr = /\?(.+)$/.exec(scriptURL)[1]
 var search_args = ex.parseSearch(querystr)
 if (search_args.hide_index && search_args.real_index){
     var list = search_args.hide_index.split(',')
-    if(list.indexOf(location.pathname)!=-1 ){
-        location=search_args.real_index
+    for(var i=0;i<list.length;i++){
+        var item = list[i]
+        if(location.pathname.endsWith(item)){
+            location=search_args.real_index
+        }
     }
 }
 
