@@ -27,6 +27,7 @@ var ex ={
     }
 }
 
+var jump = false
 var querystr = /\?(.+)$/.exec(scriptURL)[1]
 var search_args = ex.parseSearch(querystr)
 if (search_args.hide_index && search_args.real_index){
@@ -35,12 +36,12 @@ if (search_args.hide_index && search_args.real_index){
         var item = list[i]
         if(location.pathname.endsWith(item)){
             location=search_args.real_index
+            jump=true
         }
     }
-}else{
-    $(document).ready(function(){
-        $('body').show()
-    })
+}
+if(!jump){
+    $('body').show()
 }
 
 
