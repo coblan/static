@@ -14,3 +14,7 @@
  .wy-nav-content-wrap{
       background-color: #fcfcfc;
  }
+
+ body{
+      display: none;
+ }
