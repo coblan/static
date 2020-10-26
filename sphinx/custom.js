@@ -38,7 +38,9 @@ if (search_args.hide_index && search_args.real_index){
         }
     }
 }else{
-    $('body').show()
+    $(document).ready(function(){
+        $('body').show()
+    })
 }
 
 
