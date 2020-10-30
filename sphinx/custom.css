@@ -1,12 +1,12 @@
 @media (min-width: 1700px){
    .wy-nav-content{
-        max-width: 80%;
+        max-width: 900;
         margin: 0 auto;
    }
 }
 @media (max-width: 1700px) and (min-width: 800px){
     .wy-nav-content{
-         max-width: 95%;
+         max-width: 800;
          margin: 0 auto;
     }
  }
