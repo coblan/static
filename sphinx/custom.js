@@ -40,18 +40,23 @@ if (search_args.hide_index && search_args.real_index){
         }
     }
 }
-if(!jump){
-    $('body').show()
-}
-
-
-setTimeout(function(){
-    $('#rtd-search-form input[name="q"]').attr('placeholder','搜索')
-   
-    if(search_args.content_width){
-        $('.wy-nav-content').css("max-width",search_args.content_width)
+$(document).ready(function(){
+    if(!jump){
+        $('body').show()
     }
 
-    $('.document img').parent('p').css('text-align','center')
-},20)
+    setTimeout(function(){
+        $('#rtd-search-form input[name="q"]').attr('placeholder','搜索')
+       
+        if(search_args.content_width){
+            $('.wy-nav-content').css("max-width",search_args.content_width)
+        }
+    
+        $('.document img').parent('p').css('text-align','center')
+    },20)
+
+    
+})
+
+
 
