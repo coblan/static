@@ -42,7 +42,7 @@ if (search_args.hide_index && search_args.real_index){
 }
 $(document).ready(function(){
     if(!jump){
-        $('body').show()
+        $('body').css('visibility','visible')
     }
 
     setTimeout(function(){
